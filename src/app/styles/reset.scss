@@ -1,0 +1,39 @@
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+
+// input,
+// button,
+// textarea,
+// select {
+//     margin: 0;
+//     font: inherit;
+// }
+
+button {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+}
+
+a {
+    all: unset;
+    display: inline;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }

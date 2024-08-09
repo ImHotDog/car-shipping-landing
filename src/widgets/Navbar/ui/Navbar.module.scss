@@ -1,0 +1,115 @@
+.Navbar {
+    position: sticky;
+    top: 0px;
+    z-index: 50;
+    padding: 0px;
+    backdrop-filter: blur(16px);
+    border-bottom-width: 1px;
+    border-color: rgb(64 64 64);
+}
+
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.navItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 40px;
+    width: 200px;
+    margin-right: 8px;
+}
+
+.links {
+    display: none;
+
+    @media (min-width: 1024px) { 
+        display: flex;
+        margin-left: 14px;
+        gap: 12px;
+        list-style-type: none;
+    }
+}
+
+.links {
+    display: none;
+
+    @media (min-width: 1024px) { 
+        display: flex;
+        margin-left: 14px;
+        gap: 12px;
+        list-style-type: none;
+    }
+}
+
+.orderCallButtonContainer {
+    display: none;
+
+    @media (min-width: 1024px) { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+.orderCallButton {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.burgerMenuContainer {
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column; 
+        justify-content: flex-end;
+    }
+
+
+    @media (min-width: 1024px) { 
+        display: none;
+    }
+}
+
+.mobileMenuContainer {
+    position: fixed;
+    right: 0;
+    z-index: 20;
+    // background-color: #171717;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+}
+
+.mobileMenuLinksItem {
+    padding: 16px 0;
+}
