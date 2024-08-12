@@ -37,22 +37,20 @@ const Navbar = () => {
                         </button>
                     </div>
                 </div>   
-                {mobileMenuOpen && (
-                    <div className={cls.mobileMenuContainer}>
-                        <ul>
-                            {navLinks.map((item, index) => (
-                                <li key={index} className={cls.mobileMenuLinksItem}>
-                                    <a href={item.href}>{item.label}</a>
-                                </li>
-                            ))}
-                        </ul>
-                        <div>
-                            <a className={cls.orderCallButton} href="">
-                                Заказать звонок
-                            </a>
-                        </div>
+                <div className={`${cls.mobileMenuContainer} ${mobileMenuOpen ? cls.open : ''}`}>
+                    <ul>
+                        {navLinks.map((item, index) => (
+                            <li key={index} className={cls.mobileMenuLinksItem}>
+                                <a href={item.href}>{item.label}</a>
+                            </li>
+                        ))}
+                    </ul>
+                    <div>
+                        <a className={cls.orderCallButton} href="">
+                            Заказать звонок
+                        </a>
                     </div>
-                )}    
+                </div>
             </div>
         </nav>
     );

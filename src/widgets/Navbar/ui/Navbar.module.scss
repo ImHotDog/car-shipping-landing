@@ -2,18 +2,22 @@
     position: sticky;
     top: 0px;
     z-index: 50;
-    padding: 0px;
-    backdrop-filter: blur(16px);
+    // background-color: #292929;
+    background-color: #000;
     border-bottom-width: 1px;
-    border-color: rgb(64 64 64);
+    padding-top: var(--navbar-indent-top);
+    padding-bottom: var(--navbar-indent-bottom);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
 }
 
 .container {
-    padding-left: 16px;
-    padding-right: 16px;
+    max-width: 1200px;
+    padding: 0 16px;
     margin: 0 auto;
     position: relative;
-    font-size: 14px;
     line-height: 20px;
 }
 
@@ -33,7 +37,6 @@
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    height: 40px;
     width: 200px;
     margin-right: 8px;
 }
@@ -44,24 +47,23 @@
     @media (min-width: 1024px) { 
         display: flex;
         margin-left: 14px;
-        gap: 12px;
+        gap: 40px;
         list-style-type: none;
     }
 }
 
-.links {
-    display: none;
+.links li {
+    transition: 0.3s;
+}
 
-    @media (min-width: 1024px) { 
-        display: flex;
-        margin-left: 14px;
-        gap: 12px;
-        list-style-type: none;
-    }
+
+.links li:hover {
+    color: #F0DC20;
 }
 
 .orderCallButtonContainer {
     display: none;
+    font-weight: 900;
 
     @media (min-width: 1024px) { 
         display: flex;
@@ -72,11 +74,17 @@
 }
 
 .orderCallButton {
-    padding: 10px 20px;
-    background-color: #FFD700;
+    padding: 10px 15px;
+    background-color: #F0DC20;
+    color: #000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.orderCallButton:hover {
+    background-color: #f0db20d0;
 }
 
 .burgerMenuContainer {
@@ -97,19 +105,42 @@
     position: fixed;
     right: 0;
     z-index: 20;
-    // background-color: #171717;
+    background-color: #171717;
     width: 100%;
+    height: 100%;
     padding: 12px;
+    margin-top: var(--navbar-indent-bottom);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
 
     @media (min-width: 1024px) {
       display: none;
     }
 }
 
+.mobileMenuContainer.open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.mobileMenuContainer ul {
+    padding: 16px;
+}
+
 .mobileMenuLinksItem {
     padding: 16px 0;
+}
+
+.mobileMenuContainer .orderCallButton {
+    display: flex;
+    justify-content: center;
+    margin: 0 15px;
 }

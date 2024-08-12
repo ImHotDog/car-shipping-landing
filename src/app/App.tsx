@@ -1,12 +1,10 @@
-import { Navbar } from "widgets/Navbar"
 import './styles/index.scss';
+import MainPage from "pages/MainPage/ui/MainPage";
 
 const App = () => {
 
   return (
-    <>
-      <Navbar/>
-    </>
+    <MainPage />
   )
 }
 

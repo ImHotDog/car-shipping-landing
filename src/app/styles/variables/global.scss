@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 :root {
-    --font-family-main: consolas, "Times New Roman", serif;
+    --font-family-main: 'Montserrat', Helvetica, Arial, sans-serif;
+    color-scheme: dark;
+
+    --navbar-indent-top: 30px;
+    --navbar-indent-bottom: 30px;
+
+    --font-size: 1rem;
+    --font-weight: 500;
+    --line-height: 1.37;
+    --letter-spacing: 0px;
 }
