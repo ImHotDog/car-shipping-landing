@@ -2,16 +2,25 @@
     position: sticky;
     top: 0px;
     z-index: 50;
-    // background-color: #292929;
-    background-color: #000;
     border-bottom-width: 1px;
     padding-top: var(--navbar-indent-top);
     padding-bottom: var(--navbar-indent-bottom);
     font-size: var(--font-size);
     font-weight: var(--font-weight);
     line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing);
 }
+
+.NavbarOpaque,
+.Navbar.menuOpen {
+    background-color: rgba(0, 0, 0, 1);
+    transition: background-color 0.3s ease;
+}
+
+.NavbarTransparent {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s ease;
+}
+
 
 .container {
     max-width: 1200px;

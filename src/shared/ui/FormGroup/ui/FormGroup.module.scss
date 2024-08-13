@@ -1,0 +1,44 @@
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroupTittle {
+    padding-bottom: 10px;
+}
+
+.formGroup input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submitButton {
+    background-color: #f0dc20;
+    color: #000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.submitButton span {
+    display: inline-block;
+    transform: translateY(1px);
+}
+
+.logoContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logoContainer img {
+    max-width: 100%;
+    height: auto;
+}

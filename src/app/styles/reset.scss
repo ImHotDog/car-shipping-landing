@@ -12,6 +12,26 @@ select {
     font: inherit;
 }
 
+input, select, textarea {
+    background-color: #fff;
+    color: #000;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #777;
+}
+
+input, textarea {
+    border: 1px solid #ccc;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    background-color: #fff;
+    color: #000;
+}
+
+
 button {
     all: unset;
     display: inline-flex;
