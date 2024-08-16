@@ -1,5 +1,5 @@
 import cls from './FeatureSection.module.scss';
-import { cardSourse } from '../constants/cardSources';
+import { cardSource } from '../constants/cardSource';
 import { CardInfo } from 'entities/CardInfo';
 
 const FeatureSection = () => {
@@ -11,7 +11,7 @@ const FeatureSection = () => {
                     покупки авто из США
                 </h1>
                 <div className={cls.Cards}>
-                    {cardSourse.map((card, index) => (
+                    {cardSource.map((card, index) => (
                         <CardInfo 
                             title={card.title}
                             description={card.description}

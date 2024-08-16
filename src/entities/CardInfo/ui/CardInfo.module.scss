@@ -30,6 +30,13 @@
 
 .Icon {
     margin-bottom: 15px;
+
+    svg {
+
+        fill: #F0DC20;
+        height: 70px;
+        width: 70px;
+    }
 }
 
 @media (max-width: 768px) {

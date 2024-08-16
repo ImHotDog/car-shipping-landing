@@ -1,20 +1,20 @@
-import { FC, ReactNode } from 'react';
+import { ComponentType, FC } from 'react';
 import cls from './CardInfo.module.scss';
 
 interface CardInfoProps {
     title: string;
     description: string;
-    icon?: ReactNode;
+    icon?: ComponentType;
     titleColor?: boolean;
 }
 
-const CardInfo: FC<CardInfoProps> = ({ title, description, icon, titleColor }) => {
+const CardInfo: FC<CardInfoProps> = ({ title, description, icon: Icon, titleColor }) => {
     return (
         <div className={cls.CardInfo}>
             <div className={cls.Content}>
-                {icon &&
+                {Icon &&
                     <div className={cls.Icon}>
-                        {icon}
+                        <Icon />
                     </div>
                 }
                 <h3 className={titleColor ? cls.TitleColor : ''}>
