@@ -27,6 +27,7 @@ const OrderCallModal: FC<ModalProps> = ({ isOpen, onClose }) => {
     });
     const [modalType, setModalType] = useState<'success' | 'error' | null>(null);
     const [isNotificationModalOpen, setIsNotificationModalOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const emailJsForm = useRef<HTMLFormElement | null>(null);
 
@@ -47,6 +48,8 @@ const OrderCallModal: FC<ModalProps> = ({ isOpen, onClose }) => {
     const sendEmail = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        setIsLoading(true);
+
         if (emailJsForm.current) {
             emailjs
             .sendForm('service_wrn95cv', 'template_bjoymtu', emailJsForm.current, {
@@ -54,16 +57,19 @@ const OrderCallModal: FC<ModalProps> = ({ isOpen, onClose }) => {
             })
             .then(
                 () => {
-                    setFormState({ userName: '', userPhone: '', userCountry: '' });
                     onClose();
+                    setFormState({ userName: '', userPhone: '', userCountry: '' });
                     setModalType('success');
                     setIsNotificationModalOpen(true);
+                    setIsLoading(false);
                 },
                 () => {
-                    setFormState({ userName: '', userPhone: '', userCountry: '' });
+                    
                     onClose();
+                    setFormState({ userName: '', userPhone: '', userCountry: '' });
                     setModalType('error');
                     setIsNotificationModalOpen(true);
+                    setIsLoading(false);
                 },
             );
         }
@@ -113,6 +119,7 @@ const OrderCallModal: FC<ModalProps> = ({ isOpen, onClose }) => {
                         <Button 
                             value={'Отправить'} 
                             type='submit'
+                            isLoading={isLoading}
                         />
                     </form>
                 </div>

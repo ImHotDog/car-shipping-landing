@@ -11,3 +11,19 @@
 .orderCallButton:hover {
     background-color: #f0db20d0;
 }
+
+.orderCallButton.isLoading {
+    background-color: #f8efa1;
+}
+
+.loaderWrapper {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+
+}
+
+.loader {
+    width: 30px;
+    height: 30px;
+}
