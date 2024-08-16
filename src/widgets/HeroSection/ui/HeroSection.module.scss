@@ -1,4 +1,138 @@
 .MainSection {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
     background-image: url("../../../shared/assets/img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.MainSection::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);;
+    z-index: 1;
+}
+
+.Content {
+    padding: 20px;
+    max-width: 1200px;
+    padding: 20px 250px 20px 20px;
+    text-align: left;
+    z-index: 2;
+}
+
+.Tittle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    span {
+        color: #F0DC20;
+    }
+}
+
+.FeaturesList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
     
+    li {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+}
+
+.Icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    
+    img {
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        transition: filter 0.3s ease;
+    }
+
+    img:hover {
+        filter: brightness(80%);
+    }
+}
+
+.Contact, .Email {
+    margin-top: 20px;
+    font-size: 16px;
+    
+    a {
+        color: #F0DC20;
+        text-decoration: underline;
+        font-weight: bold;
+        transition: color 0.3s ease, text-decoration 0.3s ease;
+    }
+
+    a:hover {
+        color: #f0db20c2;
+        text-decoration: none;
+    }
+}
+
+.Button {
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .Tittle {
+        font-size: 2rem;
+    }
+
+    .Content {
+        padding: 15px 40px 15px 15px;
+    }
+
+    .FeaturesList li {
+        font-size: 16px;
+    }
+
+    .Icons img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Tittle {
+        font-size: 1.5rem;
+    }
+
+    .Content {
+        padding: 10px 20px 10px 10px;
+        text-align: center;
+    }
+
+    .FeaturesList li {
+        font-size: 14px;
+    }
+
+    .Icons {
+        justify-content: center
+    }
+
+    .Icons img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .Contact, .Email {
+        font-size: 14px;
+    }
 }
