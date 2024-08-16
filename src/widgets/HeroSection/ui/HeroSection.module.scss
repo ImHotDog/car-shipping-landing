@@ -31,7 +31,7 @@
     z-index: 2;
 }
 
-.Tittle {
+.Title {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -57,14 +57,14 @@
     gap: 10px;
     margin-top: 20px;
     
-    img {
+    svg {
         width: 35px;
         height: 35px;
         cursor: pointer;
         transition: filter 0.3s ease;
     }
 
-    img:hover {
+    svg:hover {
         filter: brightness(80%);
     }
 }
@@ -91,7 +91,7 @@
 }
 
 @media (max-width: 768px) {
-    .Tittle {
+    .Title {
         font-size: 2rem;
     }
 
@@ -103,14 +103,14 @@
         font-size: 16px;
     }
 
-    .Icons img {
+    .Icons svg {
         width: 30px;
         height: 30px;
     }
 }
 
 @media (max-width: 480px) {
-    .Tittle {
+    .Title {
         font-size: 1.5rem;
     }
 
@@ -124,10 +124,10 @@
     }
 
     .Icons {
-        justify-content: center
+        justify-content: center;
     }
 
-    .Icons img {
+    .Icons svg {
         width: 25px;
         height: 25px;
     }

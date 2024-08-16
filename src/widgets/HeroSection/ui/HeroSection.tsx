@@ -1,15 +1,17 @@
 import { Button } from 'shared/ui/Button';
 import cls from './HeroSection.module.scss';
-import whatsappIcon from 'shared/assets/icons/whatsapp.svg';
-import telegramIcon from 'shared/assets/icons/telegram.svg';
-import instagramIcon from 'shared/assets/icons/instagram.svg';
+import WhatsappIcon from 'shared/assets/icons/whatsapp.svg?react';
+import TelegramIcon from 'shared/assets/icons/telegram.svg?react';
+import InstagramIcon from 'shared/assets/icons/instagram.svg?react';
+
+
 
 const HeroSection = () => {
     return (
         <div className={cls.MainSection}>
             <div className={cls.Content}>
 
-                <h1 className={cls.Tittle}>
+                <h1 className={cls.Title}>
                     Новые и автомобили с пробегом из США от 2019 года 
                     <span> с выгодой до 60%</span>
                 </h1>
@@ -23,9 +25,9 @@ const HeroSection = () => {
                 <Button value='Подобрать авто' className={cls.Button} />
 
                 <div className={cls.Icons}>
-                    <img src={whatsappIcon} alt="WhatsApp" />
-                    <img src={telegramIcon} alt="Telegram" />
-                    <img src={instagramIcon} alt="Instagram" />
+                    <WhatsappIcon/>
+                    <TelegramIcon />
+                    <InstagramIcon />
                 </div>
 
                 <div className={cls.Contact}>
