@@ -1,5 +1,5 @@
-.FeatureSection {
-    height: calc(100vh - var(--navbar-height));
+.FeatureAboutSection {
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@
 }
 
 @media (max-width: 768px) {
-    .FeatureSection {
+    .FeatureAboutSection {
         height: auto;
         margin-top: 40px;
         
@@ -57,7 +57,7 @@
 }
 
 @media (max-width: 480px) {
-    .FeatureSection {
+    .FeatureAboutSection {
         height: auto;
         margin-top: 40px;
         

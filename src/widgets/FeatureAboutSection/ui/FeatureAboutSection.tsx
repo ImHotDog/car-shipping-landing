@@ -15,7 +15,7 @@ const iconSource = [
 
 const FeatureAboutSection = () => {
     return (
-        <div className={cls.FeatureSection}>
+        <div className={cls.FeatureAboutSection}>
             <div className={cls.Content}>
                 <h1 className={cls.Title}>
                     <span>Почему </span>
