@@ -1,1 +1,0 @@
-export { default as OrderCallModal } from './ui/OrderCallModal';

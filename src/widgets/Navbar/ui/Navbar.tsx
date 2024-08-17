@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import cls from './Navbar.module.scss';
 import logo from 'shared/assets/logo/39740303.svg'
 import { navLinks } from '../constants/navLinks';
-import { OrderCallModal } from 'features/OrderCallModal';
+import { CallbackModal } from 'features/CallbackModal';
 import { Button } from 'shared/ui/Button';
 
 const Navbar = () => {
@@ -81,7 +81,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-            <OrderCallModal isOpen={isModalOpen} onClose={toggleModal} />
+            <CallbackModal isOpen={isModalOpen} onClose={toggleModal} />
         </>
         
     );
