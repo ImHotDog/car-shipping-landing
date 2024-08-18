@@ -22,7 +22,9 @@ const HeroSection = () => {
                     <li>- Депозитный договор и инвойс на Ваше имя.</li>
                 </ul>
 
-                <Button value='Подобрать авто' className={cls.Button} />
+                <a href="#calculatorSection">
+                    <Button value='Подобрать авто' className={cls.Button} />
+                </a>
 
                 <div className={cls.Icons}>
                     <WhatsappIcon/>
