@@ -10,10 +10,6 @@ interface ModalProps {
     onClose: () => void;
 }
 
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
 const CallbackModal: FC<ModalProps> = ({ isOpen, onClose }) => {
 
     const [formState, setFormState] = useState<{ [key: string]: string }>({});
@@ -25,7 +21,7 @@ const CallbackModal: FC<ModalProps> = ({ isOpen, onClose }) => {
     const emailJsForm = useRef<HTMLFormElement | null>(null);
 
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement| HTMLTextAreaElement | HTMLSelectElement>) => {
         const { id, value } = e.target;
         setFormState(prevState => ({
             ...prevState,
@@ -47,13 +43,12 @@ const CallbackModal: FC<ModalProps> = ({ isOpen, onClose }) => {
 
         setIsLoading(true);
 
+
         if (emailJsForm.current) {
-            emailjs.sendForm(
-                EMAILJS_SERVICE_ID, 
-                EMAILJS_TEMPLATE_ID, 
-                emailJsForm.current, 
-                EMAILJS_PUBLIC_KEY
-            ).then(
+            emailjs.sendForm('service_wrn95cv', 'template_bjoymtu', emailJsForm.current, {
+                publicKey: 'fl4WEz4zvW31gT5bt',
+            })
+            .then(
                 () => {
                     onClose();
                     resetFormState();

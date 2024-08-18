@@ -1,7 +1,7 @@
 import { FormEvent, forwardRef } from 'react';
 import cls from './CallbackForm.module.scss';
 import { FormGroup } from 'shared/ui/FormGroup';
-import { Input, InputWithMask } from 'shared/ui/Input';
+import { Input, InputWithMask, Textarea } from 'shared/ui/Input';
 import { Select } from 'shared/ui/Select';
 import { FormField } from '../types/formField';
 import { Button } from 'shared/ui/Button';
@@ -10,7 +10,7 @@ interface CallbackFormProps {
     fields: FormField[];
     formState: { [key: string]: string };
     isLoading: boolean;
-    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
+    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
     onSubmit: (e: FormEvent<HTMLFormElement>) => void;
 }
 
@@ -50,6 +50,17 @@ const CallbackForm= forwardRef<HTMLFormElement, CallbackFormProps>(({ fields, fo
                             onChange={onChange}
                             placeholder={field.placeholder}
                             required={field.required}
+                        />
+                    )}
+                    {field.type === 'textarea' && (
+                        <Textarea
+                            id={field.id}
+                            name={field.id}
+                            placeholder={field.placeholder}
+                            required={field.required}
+                            value={formState[field.id] || ''}
+                            onChange={onChange}
+                            rows={5}
                         />
                     )}
                 </FormGroup>

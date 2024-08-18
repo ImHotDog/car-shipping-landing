@@ -1,5 +1,5 @@
 .FeatureAboutSection {
-    height: 100vh;
+    height: calc(100vh + var(--navbar-height));
     width: 100%;
     display: flex;
     justify-content: center;
@@ -52,14 +52,12 @@
 
     .Title {
         font-size: 1.8rem;
-        margin-bottom: 40px;
     }
 }
 
 @media (max-width: 480px) {
     .FeatureAboutSection {
         height: auto;
-        margin-top: 40px;
         
     }
     .Cards {

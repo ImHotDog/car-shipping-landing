@@ -4,6 +4,7 @@ import cls from "./MainPage.module.scss";
 import { FeatureSection } from "widgets/FeatureSection";
 import { FeatureAboutSection } from "widgets/FeatureAboutSection";
 import { Footer } from "widgets/Footer";
+import { CalculatorSection } from "widgets/CalculatorSection";
 
 const MainPage = () => {
     return (
@@ -18,6 +19,10 @@ const MainPage = () => {
 
             <div id="featureAboutSection">
                 <FeatureAboutSection />
+            </div>
+
+            <div id="calculatorSection">
+                <CalculatorSection />
             </div>
 
             <Footer />

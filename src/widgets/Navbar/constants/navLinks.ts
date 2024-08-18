@@ -13,6 +13,6 @@ export const navLinks = [
     },
     { 
         label: "Стоимость услуг", 
-        href: "#" 
+        href: "#calculatorSection" 
     },
 ];

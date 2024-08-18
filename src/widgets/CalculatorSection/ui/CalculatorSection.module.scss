@@ -1,0 +1,118 @@
+.CalculatorSection {
+    height: calc(100vh + var(--navbar-height));
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input, select, textarea {
+        background-color: #545454;
+        color: #FFF;
+    }
+    
+    input::placeholder, textarea::placeholder, select {
+        color: #FFF;
+    }
+
+    
+    input, select, textarea {
+        border: 1px solid #545454;
+        transition: background-color 0.3s ease;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+        outline: none;
+        background-color: #5e5e5e;
+        color: #FFF;
+    }
+}
+
+.Content {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.PanelForm {
+    display: flex;
+
+    background-color: #292929;
+    border: 1px solid #6E6E6E;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.Title {
+    text-align: center;
+    margin-bottom: 50px;
+
+    span {
+        color: #F0DC20;
+    }
+
+    p {
+        padding-top: 20px;
+    }
+}
+
+.Description {
+    text-align: center;
+}
+
+.LeftPanel {
+    flex: 1;
+    min-height: 100%;
+    background-image: url("../../../shared/assets/img/callForm.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.RightPanel {
+    flex: 1;
+    padding: 30px 40px;
+}
+
+@media (max-width: 768px) {
+    .CalculatorSection {
+        padding: 0 16px;
+    }
+    .PanelForm {
+        flex-direction: column; 
+    }
+
+    .LeftPanel {
+        min-height: 150px;
+        flex: none;
+        
+        
+        background-position: 35% 35%;
+    }
+
+    .RightPanel {
+        flex: none;
+        padding: 20px;
+    }
+
+    .Title {
+        h1 {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .Title {
+        margin-bottom: 20px;
+    }
+
+    .RightPanel {
+        padding: 15px;
+    }
+
+    .Title {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+}
